@@ -1,0 +1,120 @@
+.messages-container {
+    max-height: 200px;
+    overflow: auto;
+}
+.messages-container p{
+    cursor: default;
+}
+.home {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.home>button {
+    border-radius: 12px;
+    padding: 0.5rem;
+    background-color: rgb(134, 130, 130);
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 4.5rem;
+}
+
+.chat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.to-id {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    font-weight: 700;
+    font-size: large;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+    font-weight: 700;
+    font-size: large;
+}
+
+.input-field textarea {
+    margin-top: -0.5rem;
+}
+
+.submit-single-chat {
+    border-radius: 12px;
+    padding: 0.5rem;
+    background-color: rgb(134, 130, 130);
+    border: none;
+    color: white;
+    width: 25vw;
+    text-transform: uppercase;
+    position: relative;
+    left: 20%;
+    border: 1px solid white;
+}
+
+.submit-single-chat:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.join {
+    border-radius: 6px;
+    padding: 0.5rem;
+    background-color: rgb(134, 130, 130);
+    border: none;
+    color: white;
+    width: 10vw;
+    text-transform: uppercase;
+    cursor: pointer;
+
+}
+
+.group-chat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem ;
+}
+
+.group-chat textarea {
+    width: 44vw;
+}
+
+.submit-group-chat {
+    border-radius: 12px;
+    padding: 0.5rem;
+    background-color: rgb(134, 130, 130);
+    border: none;
+    color: white;
+    width: 25vw;
+    text-transform: uppercase;
+    border: 1px solid;
+    position: relative;
+    left: 30%;
+}
+
+.submit-group-chat:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    border: 1px solid black;
+}
+.room-chat{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
