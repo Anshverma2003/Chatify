@@ -11,7 +11,8 @@ const Home = () => {
     const [roomVisible, setRoomVisible] = useState(false);
     const [singleChat, setSingleChat] = useState(true);
 
-    const socket = useMemo(() => io('http://localhost:8080'), []);
+    const socket = useMemo(() => io('https://chatify-5pzqcpm73-ansh-vermas-projects-a57df2a8.vercel.app'), []);
+
 
 
     useEffect(() => {

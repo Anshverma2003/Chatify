@@ -1,15 +1,14 @@
 import express from 'express';
 import { Server } from 'socket.io';
-import { createServer } from 'http'
+import { createServer } from 'http';
 
 const app = express();
-const port = 8080;
-
+const port = process.env.PORT || 8080;
 
 const server = createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: ['http://localhost:3000', 'chrome-extension://pianhoblplginndplnpobnghlmooiicc'],
+        origin: ['https://chatify-client-theta.vercel.app', 'chrome-extension://pianhoblplginndplnpobnghlmooiicc'],
         methods: ["GET", "POST"]
     }
 });
@@ -31,7 +30,6 @@ io.on('connection', (socket) => {
     });
 });
 
-
 server.listen(port, () => {
     console.log(`Server is running at port ${port}`);
-})
+});
