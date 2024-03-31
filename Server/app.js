@@ -5,14 +5,13 @@ import { createServer } from 'http';
 const app = express();
 const port = process.env.PORT || 8080;
 
-app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', 'https://chatify-client-theta.vercel.app');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
-    next();
-});
-
 const server = createServer(app);
-const io = new Server(server);
+const io = new Server(server, {
+    cors: {
+        origin: ['https://chatify-client-theta.vercel.app/', 'chrome-extension://pianhoblplginndplnpobnghlmooiicc'],
+        methods: ["GET", "POST"]
+    }
+});
 
 io.on('connection', (socket) => {
     console.log('user connected', socket.id);
