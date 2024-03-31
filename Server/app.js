@@ -8,7 +8,7 @@ const port = process.env.PORT || 8080;
 const server = createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: ['https://chatify-client-theta.vercel.app', 'chrome-extension://pianhoblplginndplnpobnghlmooiicc'],
+        origin: '*',
         methods: ["GET", "POST"]
     }
 });
