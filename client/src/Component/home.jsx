@@ -11,8 +11,7 @@ const Home = () => {
     const [roomVisible, setRoomVisible] = useState(false);
     const [singleChat, setSingleChat] = useState(true);
 
-    const socket = useMemo(() => io('http://localhost:8080'), []);
-
+    const socket = useMemo(() => io('https://chatify-nine-coral.vercel.app'), []);
 
 
     useEffect(() => {
