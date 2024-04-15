@@ -7,8 +7,7 @@ const app = express();
 const port = process.env.PORT || 8080;
 
 const allowedOrigins = [
-  'https://marvel-mart-ten.vercel.app',
-  // Add other origins as needed
+  'https://chatify-client-theta.vercel.app/',
 ];
 
 const corsOptions = {
