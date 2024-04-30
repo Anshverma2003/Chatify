@@ -7,7 +7,7 @@ const app = express();
 const port = process.env.PORT || 8080;
 
 const allowedOrigins = [
-  'https://chatify-five-eta.vercel.app/',
+  'https://chatify-five-eta.vercel.app',
 ];
 
 const corsOptions = {
@@ -22,8 +22,7 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-const server = createServer(app); // Moved this line up
-
+const server = createServer(app);
 const io = new Server(server, {
   cors: {
     origin: allowedOrigins,
