@@ -7,7 +7,7 @@ const app = express();
 const port = process.env.PORT || 8080;
 
 const allowedOrigins = [
-  'https://chatify-client-theta.vercel.app/',
+  'https://chatify-five-eta.vercel.app/',
 ];
 
 const corsOptions = {
