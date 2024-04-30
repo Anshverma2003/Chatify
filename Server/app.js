@@ -20,6 +20,9 @@ const corsOptions = {
   },
 };
 
+app.use(cors(corsOptions));
+
+const server = createServer(app); // Moved this line up
 
 const io = new Server(server, {
   cors: {
@@ -27,10 +30,6 @@ const io = new Server(server, {
     methods: ["GET", "POST"]
   }
 });
-
-app.use(cors(corsOptions));
-const server = createServer(app);
-
 
 io.on('connection', (socket) => {
   console.log('user connected', socket.id);
